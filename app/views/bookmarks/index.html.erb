@@ -1,5 +1,14 @@
 <h1>Listing bookmarks</h1>
+<% # link to index action with a paramater flag %>
+request.parameters.merge({:sort => "title ASC"})j
 <%= link_to 'My Kramerks', bookmarks_path %>
+
+<br/>
+<% @kramerks = 'hi'%>
+
+<% if @kramerks %>
+  <%= p @kramerks %>
+<% end %>
 
 <% if @hashtag %>
   <h2><%= @hashtag %></h2>
